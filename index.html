@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soekarno Run 2026 - Landing Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:linear-gradient(180deg,#d90429,#9d0208);color:#fff}
+nav{position:fixed;top:0;width:100%;padding:16px 6%;display:flex;justify-content:space-between;background:rgba(0,0,0,.2);backdrop-filter:blur(10px);z-index:999}
+.logo{font-weight:800}
+.btn{background:#fff;color:#c1121f;padding:12px 24px;border-radius:40px;text-decoration:none;font-weight:700}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px}
+.hero h1{font-size:clamp(3rem,8vw,6rem);line-height:1}
+.hero p{margin:20px auto;max-width:700px}
+.section{padding:80px 6%}
+.title{text-align:center;font-size:2.5rem;font-weight:800;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card,.timer-box,.faq{background:rgba(255,255,255,.1);padding:24px;border-radius:22px}
+.timer{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:15px}
+.timer-box h2{font-size:2.4rem}
+.ticket{background:#fff;color:#222;padding:30px;border-radius:25px;text-align:center}
+.ticket h3{color:#c1121f}
+.price{font-size:2rem;font-weight:900}
+footer{text-align:center;padding:40px;border-top:1px solid rgba(255,255,255,.2)}
+#loader{display:none;position:fixed;inset:0;background:#000d;z-index:9999;align-items:center;justify-content:center;flex-direction:column}
+.spin{width:90px;height:90px;border:8px solid rgba(255,255,255,.2);border-top:8px solid #fff;border-radius:50%;animation:rot 1s linear infinite}
+@keyframes rot{100%{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<div id="loader">
+<div class="spin"></div>
+<h2 style="margin-top:20px">Menghubungkan ke Formulir...</h2>
+</div>
+
+<nav>
+<div class="logo">SOEKARNO RUN 2026</div>
+<a href="#" onclick="goForm()" class="btn">DAFTAR</a>
+</nav>
+
+<section class="hero">
+<div>
+<h1>10K CENTRAL CELEBES<br>SOEKARNO RUN 2026</h1>
+<p>04 Juli 2026 • Palu, Sulawesi Tengah • Berlari Di Atas Kaki Sendiri</p>
+<a href="#" onclick="goForm()" class="btn">DAFTAR SEKARANG</a>
+</div>
+</section>
+
+<section class="section">
+<h2 class="title">COUNTDOWN EVENT</h2>
+<div class="timer">
+<div class="timer-box"><h2 id="d">0</h2><p>Hari</p></div>
+<div class="timer-box"><h2 id="h">0</h2><p>Jam</p></div>
+<div class="timer-box"><h2 id="m">0</h2><p>Menit</p></div>
+<div class="timer-box"><h2 id="s">0</h2><p>Detik</p></div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="title">HIGHLIGHT EVENT</h2>
+<div class="grid">
+<div class="card">🏅 Finisher Medal Eksklusif</div>
+<div class="card">👕 Jersey Resmi Event</div>
+<div class="card">🏆 Hadiah Podium</div>
+<div class="card">🎁 Doorprize Menarik</div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="title">RACE PACK</h2>
+<div class="grid">
+<div class="card">BIB Number</div>
+<div class="card">Official Jersey</div>
+<div class="card">Finisher Medal</div>
+<div class="card">Sponsor Merchandise</div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="title">KATEGORI PENDAFTARAN</h2>
+<div class="grid">
+<div class="ticket">
+<h3>INDIVIDUAL</h3>
+<div class="price">Rp100.000</div>
+<p>1 Peserta</p><br>
+<a href="#" onclick="goForm()" class="btn">Pilih</a>
+</div>
+<div class="ticket">
+<h3>KOLEKTIF 5 ORANG</h3>
+<div class="price">Rp430.000</div>
+<p>5 Peserta</p><br>
+<a href="#" onclick="goForm()" class="btn">Pilih</a>
+</div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="title">HADIAH PODIUM</h2>
+<div class="grid">
+<div class="card">PUTRA<br><br>🥇2.500.000<br>🥈1.750.000<br>🥉1.500.000<br>4-6 Hadiah</div>
+<div class="card">PUTRI<br><br>🥇2.500.000<br>🥈1.750.000<br>🥉1.500.000<br>4-6 Hadiah</div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="title">FAQ</h2>
+<div class="faq">Apakah mendapat jersey? Ya.</div><br>
+<div class="faq">Apakah mendapat medali? Ya, untuk seluruh finisher.</div><br>
+<div class="faq">Apakah tersedia kolektif? Ya, 5 orang Rp430.000.</div>
+</section>
+
+<footer>
+<h2>SOEKARNO RUN 2026</h2>
+<p>Palu, Sulawesi Tengah</p>
+</footer>
+
+<script>
+function goForm(){
+document.getElementById('loader').style.display='flex';
+setTimeout(()=>{
+location.href='https://onlinetiketdigital.github.io/FORM-SOEKARNO/';
+},2500);
+}
+const target=new Date('2026-07-04T00:00:00').getTime();
+setInterval(()=>{
+const n=new Date().getTime();
+const x=target-n;
+document.getElementById('d').innerText=Math.floor(x/86400000);
+document.getElementById('h').innerText=Math.floor((x%86400000)/3600000);
+document.getElementById('m').innerText=Math.floor((x%3600000)/60000);
+document.getElementById('s').innerText=Math.floor((x%60000)/1000);
+},1000);
+</script>
+
+</body>
+</html>
